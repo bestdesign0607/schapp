@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.social-icon {
+  @apply w-12 h-12 rounded-full bg-white border border-purple-200 
+  flex items-center justify-center text-purple-700 text-lg
+  shadow-sm transition hover:bg-purple-700 hover:text-white hover:scale-105;
+}
