@@ -17,10 +17,16 @@ Including another URLconf
 from django.urls import path, include
 from django.contrib import admin
 from django.urls import path
+from django.urls import re_path
+from django.views.generic import TemplateView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
     path('academics/', include('academics.urls')),
     
+
+    # This makes React handle all other routes
+    re_path(r"^.*$", TemplateView.as_view(template_name="index.html")),
 ]

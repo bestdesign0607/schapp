@@ -291,6 +291,7 @@ TEMPLATES = [
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [],
         "APP_DIRS": True,
+        "DIRS": [os.path.join(BASE_DIR, "frontend_build")],
         "OPTIONS": {
             "context_processors": [
                 "django.template.context_processors.request",
@@ -342,6 +343,10 @@ USE_TZ = True
 STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "frontend_build", "static"),
+]
 
 # --------------------------------------------------
 # DEFAULT PRIMARY KEY
