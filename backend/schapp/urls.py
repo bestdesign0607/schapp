@@ -28,5 +28,5 @@ urlpatterns = [
     
 
     # This makes React handle all other routes
-    re_path(r"^.*$", TemplateView.as_view(template_name="index.html")),
+    re_path(r"^(?!assets/).*", TemplateView.as_view(template_name="index.html")),
 ]
